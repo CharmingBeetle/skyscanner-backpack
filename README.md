@@ -1,2 +1,0 @@
-# skyscanner-backpack
-Forage project
