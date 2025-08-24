@@ -22,7 +22,7 @@ const App = () => (
         To get started, edit <BpkCode>src/App.jsx</BpkCode> and save to reload.
       </BpkText>
       <Calendar></Calendar>
-      <BpkButton onClick={() => alert('It works!')}>Click me</BpkButton>
+      <BpkButton onClick={() => alert('It works!')} className={getClassName('App__continue-button')}>Continue</BpkButton>
     </main>
   </div>
 );

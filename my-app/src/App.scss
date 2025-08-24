@@ -7,6 +7,8 @@
 
 .App {
   text-align: center;
+  background-color: #05203C;
+  color: white;
 
   &__header {
     padding: bpk-spacing-lg() * 2;
@@ -17,7 +19,7 @@
     @include bpk-box-shadow-sm;
 
     @include bpk-breakpoint-mobile {
-      padding: bpk-spacing-xl();
+      padding: bpk-spacing-sm();
     }
   }
 
@@ -26,12 +28,12 @@
   }
 
   &__main {
-    padding: bpk-spacing-xxl();
+    padding: bpk-spacing-sm() bpk-spacing-xxl() bpk-spacing-xxl() bpk-spacing-xxl();
 
     @include container;
 
     @include bpk-breakpoint-mobile {
-      padding: bpk-spacing-base();
+      padding: bpk-spacing-sm() bpk-spacing-base() bpk-spacing-base() bpk-spacing-base();
     }
   }
 
@@ -44,8 +46,47 @@
   }
 }
 
+// Calendar
 .Calendar {
-  margin: bpk-spacing-lg() 0;
+  margin: bpk-spacing-lg() auto bpk-spacing-lg() auto;
   text-align: center;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:white;
+  border-radius: 10px;
+
+  &__title {
+    margin-bottom: bpk-spacing-md();
+    color: bpk-color-sky-blue();
+  }
+
+  &__input {
+    margin-bottom: bpk-spacing-md();
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__component {
+    margin: 0 auto;
+  }
+}
+
+// Continue btn  
+.App__continue-button {
+  background-color: #0062e3 !important;
+  color: white !important;
+  border-color: #0062e3 !important;
+
+  &:hover {
+    background-color: #0051b8 !important;
+    border-color: #0051b8 !important;
+  }
+
+  &:active {
+    background-color: #004094 !important;
+    border-color: #004094 !important;
+  }
 }
 
