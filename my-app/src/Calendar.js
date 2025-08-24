@@ -7,7 +7,7 @@ import BpkInput, {
 } from '@skyscanner/backpack-web/bpk-component-input';
 import BpkText from '@skyscanner/backpack-web/bpk-component-text';
 import { cssModules } from '@skyscanner/backpack-web/bpk-react-utils';
-import format from 'date-fns/format';
+import { format } from 'date-fns';
 
 import STYLES from './App.scss';
 
@@ -73,6 +73,11 @@ const Calendar = () => {
     });
   };
 
+  const handleInputChange = (event) => {
+    // Handle input changes if needed
+    console.log('Input changed:', event.target.value);
+  };
+
   return (
     <div className={getClassName('Calendar')}>
       <BpkText tagName="h2" textStyle="lg" className={getClassName('Calendar__title')}>
@@ -85,6 +90,7 @@ const Calendar = () => {
         value={(selectionConfiguration.date || '').toString()}
         placeholder="Departure date"
         className={getClassName('Calendar__input')}
+        onChange={handleInputChange}
       />
       <BpkCalendar
         id="calendar"
