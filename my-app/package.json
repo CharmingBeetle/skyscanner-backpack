@@ -8,6 +8,7 @@
     "@skyscanner/cra-template-backpack": "0.0.9",
     "bpk-mixins": "^42.0.1",
     "bpk-stylesheets": "^9.0.17",
+    "date-fns": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
@@ -37,5 +38,8 @@
     "babelIncludePrefixes": [
       "@skyscanner[\\/]backpack-web[\\/]pk-"
     ]
+  },
+  "devDependencies": {
+    "bpk-component-calendar": "^13.1.2"
   }
 }
